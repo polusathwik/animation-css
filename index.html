@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bouncing Ball</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(to right,#dfe9f3,#ffffff);
+}
+
+.container{
+    width:300px;
+    height:600px;
+    border:3px solid black;
+    background:beige;
+    border-radius:15px;
+    position:relative;
+    overflow:hidden;
+}
+
+.box{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    background:linear-gradient(to bottom,aqua,deepskyblue);
+    border:2px solid black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:20px;
+    font-weight:bold;
+    position:absolute;
+    left:100px;
+    top:0;
+
+    animation:bouncing-ball 3s ease-in-out 5 alternate;
+}
+
+@keyframes bouncing-ball{
+
+    0%{
+        transform:translateY(0) rotate(0deg);
+    }
+
+    25%{
+        transform:translateY(150px) rotate(90deg);
+    }
+
+    50%{
+        transform:translateY(300px) rotate(180deg);
+    }
+
+    75%{
+        transform:translateY(450px) rotate(270deg);
+    }
+
+    100%{
+        transform:translateY(500px) rotate(360deg);
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="box">Ball</div>
+</div>
+
+</body>
+</html>
